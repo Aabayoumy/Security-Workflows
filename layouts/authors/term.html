@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  {{ $authorID := .Data.Term }}
+  {{ $author := index .Site.Data.authors.authors $authorID }}
+
+  {{ if $author }}
+  <div style="display: flex; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid #363a4f; padding-bottom: 2rem; margin-top: 2rem;">
+    <img src="{{ $author.image }}" alt="{{ $author.name }}" style="width: 120px; height: 120px; border-radius: 50%; margin-right: 2rem; background: #363a4f; padding: 10px;">
+    <div>
+      <h1 style="color: #8aadf4 !important; margin: 0; border: none;">{{ $author.name }}</h1>
+      <p style="color: #c6a0f6; font-size: 1.2em; margin: 5px 0;">{{ $author.role }}</p>
+      <div style="margin-top: 10px;">
+        {{ range $key, $value := $author.links }}
+          <a href="{{ $value }}" target="_blank" style="margin-right: 15px; color: #8aadf4; text-decoration: underline;">{{ $key | title }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 3rem;">
+    <h2 style="color: #f5a97f !important; border: none;">About</h2>
+    <p style="color: #cad3f5; line-height: 1.6;">{{ $author.bio }}</p>
+  </div>
+
+  <h2 style="color: #f5a97f !important; border: none;">Contributions</h2>
+  <ul style="list-style: none; padding: 0;">
+    {{ range .Pages }}
+    <li style="margin-bottom: 1rem; padding: 1rem; background: #1e2030; border-radius: 8px; border: 1px solid #363a4f;">
+      <a href="{{ .Permalink }}" style="color: #8aadf4; font-weight: bold; font-size: 1.1em; text-decoration: none;">{{ .Title }}</a>
+      <div style="color: #8087a2; font-size: 0.85em; margin-top: 5px;">
+        Published on {{ .Date.Format "January 2, 2006" }}
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+    <h1>Author: {{ .Title }}</h1>
+    <p>Please define author details in <code>data/authors.yaml</code> under the key <code>{{ $authorID }}</code>.</p>
+  {{ end }}
+</article>
+{{ end }}

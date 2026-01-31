@@ -1,0 +1,10 @@
+authors:
+  ahmed:
+    name: Ahmed Bayoumy
+    role: Senior Security Consultant | Active Directory Specialist
+    image: /ahmed.jpeg # Using your shield icon as a placeholder
+    bio: Expert in Active Directory hardening and enterprise security workflows.
+    links:
+      site: https://www.abayoumy.tech
+      github: https://github.com/Aabayoumy
+      linkedin: https://linkedin.com/in/abayoumy

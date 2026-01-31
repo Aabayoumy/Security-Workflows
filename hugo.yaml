@@ -1,22 +1,28 @@
 baseURL: /
-title: AD Workflow
-theme: hextra
+title: Security Hardening Workflow
+theme: hugo-book
+
+params:
+  BookTheme: "dark"
+  BookSearch: true
+  BookComments: false
+  BookToC: true
+  BookSection: "docs"
+  BookAuthor: "Ahmed Bayoumy"
+  BookRepo: "https://github.com/AhmedBayoumy/AD-Workflow" # Example repo
+
+disableKinds: ["RSS"]
+
+taxonomies:
+  author: authors
+  tag: tags
+  category: categories
 
 markup:
   goldmark:
     renderer:
-      unsafe: true # Required for Hextra features
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
   highlight:
     noClasses: false
-
-params:
-  navbar:
-    displayTitle: "AD Workflow"
-    displayLogo: true
-  footer:
-    displayCopyright: true
-  search:
-    enable: true
-  editURL: ""
-  blog:
-    displayLastUpdated: true

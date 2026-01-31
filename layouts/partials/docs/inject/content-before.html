@@ -1,0 +1,38 @@
+{{ if and (not .IsHome) (ne .Type "authors") }}
+  {{ $authors := .Params.authors }}
+  {{ $authorID := "" }}
+  {{ if reflect.IsSlice $authors }}
+    {{ $authorID = index $authors 0 }}
+  {{ else if $authors }}
+    {{ $authorID = $authors }}
+  {{ else }}
+    {{ $authorID = "ahmed" }}
+  {{ end }}
+  
+  {{ $author := index .Site.Data.authors.authors $authorID }}
+
+  {{ if $author }}
+  <div class="book-author-header" style="display: flex; align-items: center; margin-bottom: 2rem; border-bottom: 1px solid #363a4f; padding-bottom: 1rem;">
+    <a href="/authors/{{ $authorID }}/">
+      <img src="{{ $author.image }}" alt="{{ $author.name }}" style="width: 50px; height: 50px; border-radius: 50%; margin-right: 1rem; background: #363a4f; padding: 5px; border: 1px solid #c6a0f6;">
+    </a>
+    <div style="flex-grow: 1;">
+      <div style="font-weight: bold; color: #8aadf4; font-size: 1.1em;">
+        <a href="/authors/{{ $authorID }}/" style="color: #8aadf4; text-decoration: none;">{{ $author.name }}</a>
+      </div>
+      <div style="color: #cad3f5; font-size: 0.85em;">{{ $author.role }}</div>
+      <div style="font-size: 0.8em; margin-top: 5px;">
+        {{ range $key, $value := $author.links }}
+          <a href="{{ $value }}" target="_blank" style="margin-right: 10px; color: #c6a0f6; text-decoration: none;">{{ $key | title }}</a>
+        {{ end }}
+      </div>
+    </div>
+    <div style="text-align: right; color: #8087a2; font-size: 0.8em;">
+      {{ if .Date }}
+        <div><strong>Last Updated</strong></div>
+        <div>{{ .Date.Format "January 2, 2006" }}</div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
