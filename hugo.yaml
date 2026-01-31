@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://Aabayoumy.github.io/Security-Workflows/
 title: Security Hardening Workflow
 theme: hugo-book
 
@@ -9,7 +9,7 @@ params:
   BookToC: true
   BookSection: "docs"
   BookAuthor: "Ahmed Bayoumy"
-  BookRepo: "https://github.com/AhmedBayoumy/AD-Workflow" # Example repo
+  BookRepo: "https://github.com/Aabayoumy/Security-Workflows"
 
 disableKinds: ["RSS"]
 
