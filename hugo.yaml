@@ -10,6 +10,7 @@ params:
   BookSection: "docs"
   BookAuthor: "Ahmed Bayoumy"
   BookRepo: "https://github.com/Aabayoumy/Security-Workflows"
+  BookFavicon: "favicon.svg"
 
 disableKinds: ["RSS"]
 
