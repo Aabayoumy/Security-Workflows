@@ -1,0 +1,22 @@
+baseURL: /
+title: AD Workflow
+theme: hextra
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # Required for Hextra features
+  highlight:
+    noClasses: false
+
+params:
+  navbar:
+    displayTitle: "AD Workflow"
+    displayLogo: true
+  footer:
+    displayCopyright: true
+  search:
+    enable: true
+  editURL: ""
+  blog:
+    displayLastUpdated: true

@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# Python
+migrate_obsidian.py
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Git Submodules
+# (Keep themes/hextra as a submodule, but ignore its internal build artifacts if any)
+# themes/hextra/node_modules/
