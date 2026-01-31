@@ -18,8 +18,7 @@ Welcome to the central repository for **Active Directory** and **Entra ID** secu
 
 ---
 
-### 👤 Author
-**Ahmed Bayoumy**
-Senior Security consultant | Active Directory Specialist
+### 👤 Authors
+{{< authors_list >}}
 
 ---

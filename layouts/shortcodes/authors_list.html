@@ -1,0 +1,17 @@
+<div class="authors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+  {{ range $id, $author := .Site.Data.authors.authors }}
+  <div class="author-card" style="background: var(--gray-800); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--gray-700); text-align: center; transition: transform 0.2s ease;">
+    <a href="{{ "authors/" | relURL }}{{ $id | urlize }}" style="text-decoration: none; color: inherit;">
+      <img src="{{ $author.image | relURL }}" alt="{{ $author.name }}" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; border: 3px solid var(--color-primary);">
+      <h3 style="margin: 0.5rem 0; color: var(--color-primary);">{{ $author.name }}</h3>
+      <p style="font-weight: 600; font-size: 0.9rem; color: #a6adc8; margin-bottom: 0.5rem;">{{ $author.role }}</p>
+      <p style="font-size: 0.85rem; line-height: 1.4; color: #9399b2; margin-bottom: 1rem;">{{ $author.bio }}</p>
+    </a>
+    <div class="author-links" style="display: flex; justify-content: center; gap: 1rem;">
+      {{ with $author.links.github }}<a href="{{ . }}" target="_blank" style="color: #cad3f5;">GitHub</a>{{ end }}
+      {{ with $author.links.linkedin }}<a href="{{ . }}" target="_blank" style="color: #cad3f5;">LinkedIn</a>{{ end }}
+      {{ with $author.links.site }}<a href="{{ . }}" target="_blank" style="color: #cad3f5;">Website</a>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
