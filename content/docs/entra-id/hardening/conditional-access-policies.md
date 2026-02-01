@@ -36,6 +36,14 @@ Ensure external collaborators meet your security standards before accessing data
 
 ## 2. Attack Surface Reduction
 
+### Identify Legacy Authentication Usage
+Before blocking legacy authentication, it is crucial to identify which users or service accounts are currently using these protocols to avoid business disruption.
+- **Path:** `Microsoft Entra ID -> Monitoring -> Sign-in logs`
+- **Filter:** 
+    1. Click **Add filters** and select **Client App**.
+    2. Under the **Client App** filter, check all options under **Legacy Authentication Clients** (e.g., Authenticated SMTP, IMAP4, POP3, etc.).
+    3. Review the list of users and applications to determine if they can be migrated to Modern Authentication or if they require a specific exclusion.
+
 ### Block Legacy Authentication
 Legacy protocols (POP, IMAP, SMTP) do not support MFA and are the primary targets for password spraying.
 - **Action:** Block access.
