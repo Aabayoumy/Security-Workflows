@@ -1,0 +1,39 @@
+{{ if and (not .IsHome) (ne .Type "authors") }}
+  {{ $authors := .Params.authors }}
+  {{ $authorID := "" }}
+  {{ if reflect.IsSlice $authors }}
+    {{ $authorID = index $authors 0 }}
+  {{ else if $authors }}
+    {{ $authorID = $authors }}
+  {{ else }}
+    {{ $authorID = "ahmed" }}
+  {{ end }}
+  
+  {{ $author := index .Site.Data.authors.authors $authorID }}
+
+  {{ if $author }}
+  <div class="book-author-footer" style="display: flex; flex-direction: row; align-items: center; justify-content: flex-start; text-align: left; width: 100%; margin-top: 3rem; margin-bottom: 2rem; border-top: 1px solid #363a4f; padding-top: 2rem;">
+    <div style="margin-right: 1.5rem; flex-shrink: 0;">
+      <a href="{{ "authors/" | relURL }}{{ $authorID | urlize }}/">
+        <img src="{{ relURL $author.image }}" alt="{{ $author.name }}" style="width: 60px; height: 60px; border-radius: 50%; background: #363a4f; padding: 3px; border: 1px solid #c6a0f6; object-fit: cover; display: block;">
+      </a>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; text-align: left;">
+      <div style="font-weight: bold; color: #8aadf4; font-size: 1.2em; line-height: 1.2; margin-bottom: 2px;">
+        <a href="{{ "authors/" | relURL }}{{ $authorID | urlize }}/" style="color: #8aadf4; text-decoration: none; border: none;">{{ $author.name }}</a>
+      </div>
+      <div style="color: #cad3f5; font-size: 0.9em; line-height: 1.2; margin-bottom: 4px;">{{ $author.role }}</div>
+      <div style="font-size: 0.85em; line-height: 1.2; margin-bottom: 4px;">
+        {{ range $key, $value := $author.links }}
+          <a href="{{ $value }}" target="_blank" style="margin-right: 12px; color: #c6a0f6; text-decoration: none; border: none;">{{ $key | title }}</a>
+        {{ end }}
+      </div>
+      {{ if .Date }}
+      <div style="color: #8087a2; font-size: 0.8em; line-height: 1.2;">
+        <strong>Last Updated:</strong> {{ .Date.Format "January 2, 2006" }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+{{ end }}
