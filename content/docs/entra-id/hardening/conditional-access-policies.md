@@ -76,6 +76,14 @@ Restrict where users can register their MFA and security information to prevent 
 ## 4. Identity Protection (Risk-Based)
 *Requires Entra ID P2 Licensing.*
 
+### Monitoring Risky Users and Sign-ins
+Before enforcing risk-based policies, use the identity protection reports to investigate current risk levels in your environment.
+
+- **Risky Users:** Shows users who have been flagged due to leaked credentials or other account-level anomalies.
+  - **Path:** `Microsoft Entra ID -> Protection -> Identity Protection -> Risky users`
+- **Risky Sign-ins:** Shows individual sign-in attempts that were flagged as suspicious (e.g., atypical travel, unfamiliar properties).
+  - **Path:** `Microsoft Entra ID -> Protection -> Identity Protection -> Risky sign-ins`
+
 ### User Risk: Forced Password Reset
 - **Condition:** User risk is **High**.
 - **Grant:** Require password change.

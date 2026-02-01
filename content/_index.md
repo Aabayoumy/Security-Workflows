@@ -8,13 +8,19 @@ Welcome to the central repository for **Active Directory** and **Entra ID** secu
 
 ---
 
-### 📂 Quick Navigation
+### 📂 Exploration
 
-- **[Active Directory Hardening](docs/active-directory/)**
-  Learn how to secure on-premises AD, including Kerberos, Tiered Admin Models, and GPO hardening.
-  
-- **[Entra ID Hardening](docs/entra-id/)**
-  Best practices for securing cloud identities, Conditional Access, and Entra ID configurations.
+{{< columns >}}
+{{< card title="Active Directory" image="icons/menu.svg" link="docs/active-directory/" >}}
+Secure on-premises AD: Kerberos, Tiered Admin Models, and GPO hardening.
+{{< /card >}}
+
+<--->
+
+{{< card title="Entra ID" image="icons/menu.svg" link="docs/entra-id/" >}}
+Cloud identity security: Conditional Access, Tenant Restrictions, and Hardening.
+{{< /card >}}
+{{< /columns >}}
 
 ---
 
