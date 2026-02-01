@@ -1,0 +1,23 @@
+{{ define "main" }}
+<article class="markdown book-article">
+  <header>
+    <h1>{{ .Title }}</h1>
+    <div style="font-size: 0.9em; color: #8087a2; margin-bottom: 2rem;">
+      {{ if .Date }}
+        <span style="margin-right: 1rem;">📅 {{ .Date.Format "January 2, 2006" }}</span>
+      {{ end }}
+      
+      {{ if .Params.authors }}
+        <span style="margin-right: 1rem;">👤 {{ range $i, $a := .Params.authors }}{{ if $i }}, {{ end }}{{ $a | title }}{{ end }}</span>
+      {{ else }}
+        <span style="margin-right: 1rem;">👤 Ahmed Bayoumy</span>
+      {{ end }}
+
+      {{ if .Params.tags }}
+        <span>🏷️ {{ range $i, $t := .Params.tags }}{{ if $i }}, {{ end }}#{{ $t }}{{ end }}</span>
+      {{ end }}
+    </div>
+  </header>
+  {{- .Content -}}
+</article>
+{{ end }}
