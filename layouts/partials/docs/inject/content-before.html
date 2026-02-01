@@ -26,12 +26,11 @@
           <a href="{{ $value }}" target="_blank" style="margin-right: 10px; color: #c6a0f6; text-decoration: none;">{{ $key | title }}</a>
         {{ end }}
       </div>
-    </div>
-    <div style="text-align: right; color: #8087a2; font-size: 0.8em;">
-      {{ if .Date }}
-        <div><strong>Last Updated</strong></div>
-        <div>{{ .Date.Format "January 2, 2006" }}</div>
-      {{ end }}
+      <div style="color: #8087a2; font-size: 0.8em; margin-top: 5px;">
+        {{ if .Date }}
+          <strong>Last Updated:</strong> {{ .Date.Format "January 2, 2006" }}
+        {{ end }}
+      </div>
     </div>
   </div>
   {{ end }}

@@ -98,16 +98,27 @@ def migrate_file(file_path):
 
     content = re.sub(r'\[\[(.*?)\]\]', replace_obsidian_link, content)
 
-    # 4. Handle Frontmatter
+    # 4. Handle Tags: #tag -> add to frontmatter
+    tags = re.findall(r'(?<!\S)#([a-zA-Z0-9_/]+)', content)
+    # Remove tags from content to avoid duplication (optional, but cleaner)
+    content = re.sub(r'(?<!\S)#[a-zA-Z0-9_/]+', '', content)
+    
+    # 5. Handle Frontmatter
     title = filename.replace('.md', '').replace('-', ' ').title()
     # Use yesterday's date to avoid Hugo's "future date" rendering issue
     from datetime import timedelta
     date_str = (datetime.now() - timedelta(days=1)).strftime('%Y-%m-%dT%H:%M:%S')
     
+    tags_str = ""
+    if tags:
+        # Convert tags to a YAML list format
+        tags_list = ", ".join([f'"{tag}"' for tag in set(tags)])
+        tags_str = f"tags: [{tags_list}]\n"
+
     frontmatter = f"""---
 title: "{title}"
 date: {date_str}
-draft: false
+{tags_str}draft: false
 ---
 
 """
