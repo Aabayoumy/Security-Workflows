@@ -27,3 +27,6 @@ markup:
     startLevel: 1
   highlight:
     noClasses: false
+
+refLinksErrorLevel: WARNING
+refLinksNotFoundURL: "#"
