@@ -56,3 +56,8 @@ $container-max-width: 100% !default;
     h5 { color: #eed49f !important; } // Yellow
     h6 { color: #a6da95 !important; } // Green
 }
+
+/* Lower TOC to align with content after title */
+.book-toc-content {
+  padding-top: 10rem !important; // Adjust this value to match your title bar height
+}
