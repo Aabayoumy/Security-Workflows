@@ -25,4 +25,20 @@ Active Directory remains the primary identity store for most enterprises. Securi
 - PAM (Privileged Access Management)
 {{< /columns >}}
 
+## Start Here
+
+- [Hardening Implementation Plan]({{< relref "hardening-implementation-plan" >}})
+
+## Topics
+
+- [Privileged Access]({{< relref "privileged-access" >}})
+- [Baseline & Audit]({{< relref "baseline-and-audit" >}})
+- [Protocol Hardening]({{< relref "protocol-hardening" >}})
+- [Domain Controllers]({{< relref "domain-controllers" >}})
+- [Directory Hygiene]({{< relref "directory-hygiene" >}})
+- [Certificate Services]({{< relref "certificate-services" >}})
+- [Operations & Recovery]({{< relref "operations-and-recovery" >}})
+- [Applications & Services]({{< relref "applications-and-services" >}})
+- [Vulnerabilities & Mitigations]({{< relref "vulnerabilities-and-mitigations" >}})
+
 ---
