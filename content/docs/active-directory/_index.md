@@ -5,29 +5,36 @@ weight: 10
 authors: ["ahmed"]
 ---
 
-# 🏗️ Active Directory Hardening
+This is the practical rollout plan to harden Active Directory in phases (audit -> enforce), with verification steps and rollback notes.
 
-Active Directory remains the primary identity store for most enterprises. Securing it requires a multi-layered approach focusing on identity isolation, protocol hardening, and continuous monitoring.
+## Phase 0 - Foundations
 
-### 🎯 Key Focus Areas
+- Confirm backups, break-glass access, and a tested restore path.
+- Capture baseline: GPO reports, DC health, authentication usage, and protocol telemetry.
 
-{{< columns >}}
-**Protocol Hardening**
-- [Kerberos Armoring]({{< relref "kerberos-armoring" >}})
-- [RC4 Audit & CVE-2022-37967]({{< relref "kerberos_rc4_audit_cve-2026-20833" >}})
-- Disabling LLMNR/NBT-NS
+## Phase 1 - Privileged Access
 
-<--->
+- [Privileged Access]({{< relref "privileged-access" >}})
 
-**Access Control**
-- [Enterprise Access Model (Tiered Admin)]({{< relref "tiered-administration" >}})
-- Protected Users Group
-- PAM (Privileged Access Management)
-{{< /columns >}}
+## Phase 2 - Protocol Hardening
 
-## Start Here
+- [Protocol Hardening]({{< relref "protocol-hardening" >}})
 
-- [Hardening Implementation Plan]({{< relref "hardening-implementation-plan" >}})
+## Phase 3 - Domain Controller Hardening
+
+- [Domain Controllers]({{< relref "domain-controllers" >}})
+
+## Phase 4 - Directory Hygiene
+
+- [Directory Hygiene]({{< relref "directory-hygiene" >}})
+
+## Phase 5 - PKI / AD CS
+
+- [Certificate Services]({{< relref "certificate-services" >}})
+
+## References
+
+- [Microsoft security baseline for Windows / AD](https://learn.microsoft.com/)
 
 ## Topics
 
