@@ -2,6 +2,7 @@
 title: "Active Directory Hardening"
 bookCollapseSection: false
 weight: 10
+authors: ["ahmed"]
 ---
 
 # 🏗️ Active Directory Hardening

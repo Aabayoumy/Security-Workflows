@@ -3,7 +3,7 @@ title: "Kerberos Armoring (FAST)"
 date: 2026-02-01
 draft: false
 weight: 10
-author: "Ahmed Bayoumy"
+authors: ["ahmed"]
 tags: ["Security", "Active Directory", "Kerberos", "Hardening"]
 ---
 

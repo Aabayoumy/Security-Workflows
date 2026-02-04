@@ -1,7 +1,7 @@
 ---
 title: "Enterprise Access Model (Tiered Admin)"
 date: 2026-02-01
-author: "Ahmed Bayoumy"
+authors: ["ahmed"]
 tags: ["Security", "Active Directory", "Privileged Access"]
 weight: 30
 ---

@@ -1,0 +1,43 @@
+You are helping with a Hugo documentation site using the hugo-book theme located at /Users/abayoumy/Projects/AD-Workflow. We previously inspected the repo and found:
+- Hugo config: hugo.yaml (BookTheme dark, BookSection docs, taxonomies include authors).
+- Existing AD content already migrated into Hugo:
+  - content/docs/active-directory/kerberos-armoring/index.md
+  - content/docs/active-directory/tiered-administration/index.md
+  - content/docs/active-directory/kerberos_rc4_audit_cve-2026-20833/index.md
+- Custom layouts: layouts/baseof.html, layouts/_default/single.html, layouts/partials/docs/inject/content-after.html (author footer), layouts/shortcodes/authors_list.html, layouts/authors/term.html.
+- Custom styling: assets/_variables.scss, assets/_custom.scss.
+- Authors data: data/authors.yaml.
+- There are .DS_Store files present in content/ and layouts/ (ignored by .gitignore but still on disk).
+- Hugo version is v0.152.2+extended.
+
+We also reviewed the Obsidian migration script migrate_obsidian.py in repo root. It currently migrates a single file to content/docs/<slug>/index.md, converts Obsidian image embeds and wikilinks, and extracts #tags into frontmatter. Issues: hard-coded absolute paths, relref output uses "note.md" (not compatible with bundle URLs), limited asset search, regex tag stripping can affect code blocks, and the script doesn’t batch migrate a folder.
+
+The Obsidian source notes for AD hardening are in:
+/Users/abayoumy/GLOBAL BRANDS - Gbrands-Security Team - AD-Workflow/hardening
+
+User requirements/decisions:
+1) All migrated content must go under content/docs/active-directory/.
+2) URLs must follow topic folders (not the Obsidian directory structure).
+3) Keep ahmed as the only author for all content.
+
+We scanned notes in that hardening folder and identified a minimum “complete workflow” set to migrate first:
+- Privileged access: tiering.md, Windows Firewall - RDP IPSec and PAW.md, Jump Server.md
+- Baseline/audit: Baseline/Baseline.md, Protocols/Audit Policy Recommendations.md
+- Protocol hardening: Protocols/Audit & Disable NTLM.md, Protocols/LDAPS/Audit LDAP & Enable LDAPS settings.md, Protocols/TLS.md, Protocols/TLS GPO.md, Protocols/Audit SMBv1.md, Protocols/Disable Multicast Protocols.md
+- DC quick wins: Print spooler.md, NetCease disable dc session enumeration.md
+- Hygiene: Non-admin users can add up to 10 computer(s) to a domain.md, enable Recycle bin.md
+We found broken wikilinks referenced in notes: [[02- NTLM Audit]] and [[Restrict LDAP and Enforce LDAPS]] do not exist. Test LDAP event 2889.md exists.
+
+Next tasks:
+- Create a hub page: content/docs/active-directory/hardening-implementation-plan/index.md with a phased step-by-step rollout that links to topic pages.
+- Create topic folder bundles under content/docs/active-directory/ such as:
+  - privileged-access/, baseline-and-audit/, protocol-hardening/, domain-controllers/, directory-hygiene/ (later: delegation-and-acls/)
+- Update/replace migrate_obsidian.py to support batch migration from the hardening folder into those topic folders, including:
+  - robust image discovery and copy into page bundles
+  - remove dataviewjs blocks and Obsidian share frontmatter
+  - convert wikilinks to correct Hugo relrefs based on bundle paths (build a mapping first)
+  - handle missing wikilinks by leaving a visible TODO instead of broken relrefs
+  - improve tag extraction without touching code blocks
+- Avoid duplicating existing Hugo pages (tiering/kerberos armoring/RC4 audit): merge Obsidian improvements into existing pages instead of creating duplicates.
+
+Proceed by proposing the exact destination paths (topic folder + slug) for each selected note, then implement migration + editorial pass, and finally run a local Hugo build to validate links/images/sidebar ordering.
