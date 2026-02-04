@@ -3,8 +3,8 @@ title: "Presence of delegation where anybody can act"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 | DN                                     | delegation          | right                                                                                       |
 | -------------------------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
 | CN=Configuration,DC=bojdomain,DC=local | Authenticated Users | GenericAll, GenericWrite, WriteDacl, WriteOwner, All extended right, DSSelf, Write all prop |

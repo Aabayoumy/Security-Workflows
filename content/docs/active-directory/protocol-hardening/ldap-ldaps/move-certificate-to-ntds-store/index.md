@@ -3,9 +3,9 @@ title: "Move Certificate to NTDS Store"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["LDAPS"]
 ---
-
 ## Move Certificate to NTDS Store (DOMAIN CONTROLLER)
 
 **Server Location**: Each Domain Controller

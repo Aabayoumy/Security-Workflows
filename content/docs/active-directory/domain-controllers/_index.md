@@ -1,7 +1,8 @@
 ---
 title: "Domain Controllers"
 draft: false
-weight: 40
+weight: 70
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

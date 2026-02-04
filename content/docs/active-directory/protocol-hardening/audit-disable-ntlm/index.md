@@ -3,6 +3,7 @@ title: "Audit & Disable NTLM"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 20
 ---
 
 Steps to configure NTLMv2:

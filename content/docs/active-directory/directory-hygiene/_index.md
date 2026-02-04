@@ -1,7 +1,8 @@
 ---
 title: "Directory Hygiene"
 draft: false
-weight: 50
+weight: 30
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

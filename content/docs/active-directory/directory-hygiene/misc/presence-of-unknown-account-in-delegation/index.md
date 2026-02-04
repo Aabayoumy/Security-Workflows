@@ -3,8 +3,8 @@ title: "Presence of unknown account in delegation"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 In the case where a delegation has been created, where the account can't be translated to a NT account, it means that the delegation is actually from another domain or that the user has been deleted.
 
 

@@ -3,8 +3,8 @@ title: "At least one certificate template can be modified by everyone"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 | Name                |
 | ------------------- |
 | Machine             |

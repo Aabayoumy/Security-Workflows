@@ -3,6 +3,7 @@ title: "Windows LAPS troubleshooting guidance - Windows Server"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["WindowsLAPS", "laps"]
 ---
 This guide provides the fundamental concepts to use when troubleshooting Windows Local Administrator Password Solution (Windows LAPS) issues.

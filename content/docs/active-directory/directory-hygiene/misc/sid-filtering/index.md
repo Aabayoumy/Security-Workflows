@@ -3,8 +3,8 @@ title: "SID Filtering"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 However, the SID history is only necessary when migrated users must have access to resources in their previous domain(s). If no user has this requirement, SID filtering can be applied 
 
 ```

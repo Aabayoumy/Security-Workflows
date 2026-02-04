@@ -3,8 +3,8 @@ title: "Number of account(s) using a smart card whose password is not changed"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 | Name   | Creation             | Last logon           | Pwd Last Set | Distinguished name                       |
 | ------ | -------------------- | -------------------- | ------------ | ---------------------------------------- |
 | Admin1 | 2024-08-18 09:51:19Z | 2024-09-05 10:38:54Z | Never        | CN=Admin1,CN=Users,DC=bojdomain,DC=local |

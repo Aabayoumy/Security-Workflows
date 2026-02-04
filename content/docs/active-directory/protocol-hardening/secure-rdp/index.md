@@ -3,9 +3,9 @@ title: "Secure RDP"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["RDP"]
 ---
-
 # Secure RDP Configuration with Certificate Templates and Group Policy
 
 This comprehensive guide covers the essential steps for securing Remote Desktop Protocol (RDP) connections using certificate templates and Group Policy Objects (GPO). By implementing these security measures, you can eliminate certificate warnings and establish trusted RDP connections throughout your Active Directory environment.

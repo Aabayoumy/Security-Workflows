@@ -1,7 +1,8 @@
 ---
 title: "Privileged Access"
 draft: false
-weight: 10
+weight: 80
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

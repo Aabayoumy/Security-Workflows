@@ -3,8 +3,8 @@ title: "At least one trusted certificate found has a relatively weak RSA key"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 ![20250122163757.png](20250122163757.png)
 
 The purpose is to ensure that there is no use of a certificate using a relatively weak RSA key

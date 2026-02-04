@@ -3,6 +3,7 @@ title: "Audit SMBv1"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 40
 tags: ["smb1", "smbv1"]
 ---
 

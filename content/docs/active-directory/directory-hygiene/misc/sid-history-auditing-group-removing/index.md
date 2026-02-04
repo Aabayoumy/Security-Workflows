@@ -3,9 +3,9 @@ title: "SID History auditing group & Removing"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["SIDHistory", "trust"]
 ---
-
 **Technical explanation:**
 To migrate accounts to another domain, the attribute SID History should be added to the new account. Despite the fact that numerous hacking tools such as mimikatz allows the creation of the SID History attribute, its official creation requires the presence of a special auditing group named `DOMAIN-$$$`, for example `LAB-$$$` for the `LAB.com` domain.
 

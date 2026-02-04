@@ -3,8 +3,8 @@ title: "NetCease disable dc session enumeration"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 1. Open `Default Domain Policy > Edit`
 2. Navigate to `Computer Configuration > Preferences > Windows Settings > Registry`
 3. Right-click 1. `Registry > New > Registry Item`

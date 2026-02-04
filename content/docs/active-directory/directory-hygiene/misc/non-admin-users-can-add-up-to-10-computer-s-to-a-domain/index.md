@@ -3,8 +3,8 @@ title: "Non-admin users can add up to 10 computer(s) to a domain"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 1. Open AD Users and Computers
 2. Right-click on domain root  then `Propreties > Attribute Editor`
 3. Change `ms-DS-MachineAccountQuota` value to `0`

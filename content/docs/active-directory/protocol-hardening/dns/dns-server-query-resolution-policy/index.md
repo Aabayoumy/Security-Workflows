@@ -3,9 +3,9 @@ title: "Dns Server Query Resolution Policy"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["DNS", "DnsServerQueryResolutionPolicy"]
 ---
-
 Add-DnsServerQueryResolutionPolicy -Name "BlackholePolicy" -Action IGNORE -FQDN "EQ,*.treyresearch.com"
 
 https://learn.microsoft.com/en-us/windows-server/networking/dns/deploy/dns-policies-overview#block-queries-for-a-domain

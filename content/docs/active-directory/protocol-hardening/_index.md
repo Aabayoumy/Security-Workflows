@@ -1,7 +1,8 @@
 ---
 title: "Protocol Hardening"
 draft: false
-weight: 30
+weight: 20
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

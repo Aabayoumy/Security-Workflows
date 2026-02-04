@@ -3,9 +3,9 @@ title: "TLS"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["tls"]
 ---
-
 [TLS GPO]({{< relref "docs/active-directory/protocol-hardening/tls-gpo" >}})
 # TLS Registry Configuration for Group Policy
 

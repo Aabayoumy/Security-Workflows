@@ -3,8 +3,8 @@ title: "Review if DNS zone(s) are configured with insecure updates"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 | Zone                   |
 | ---------------------- |
 | boj.local              |

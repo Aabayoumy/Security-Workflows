@@ -3,6 +3,7 @@ title: "Reset KRBTGT Password"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 100
 ---
 
 1. Use this script [Microsoft KRBTGT Reset script - https://gallery.technet.microsoft.com/Reset-the-krbtgt-account-581a9e51](https://gist.github.com/mubix/fd0c89ec021f70023695) 

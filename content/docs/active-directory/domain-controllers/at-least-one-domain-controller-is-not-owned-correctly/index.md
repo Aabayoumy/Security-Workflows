@@ -3,8 +3,8 @@ title: "At least one domain controller is not owned correctly"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 The purpose is to perform a review of which accounts have ownership rights on a domain controller and can then modify their permissions
 
 **Technical explanation:**

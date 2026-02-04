@@ -3,9 +3,9 @@ title: "Windows Firewall - RDP IPSec and PAW"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["PAW", "RDP", "tiering"]
 ---
-
 1- From Domain controller that firewall is enable and working , export all rules : 
 `netsh advfirewall export "C:\firewall-rules.wfw"`
 2- Create Group policy, enable Doamin profile, From Setting Customize: block local rule

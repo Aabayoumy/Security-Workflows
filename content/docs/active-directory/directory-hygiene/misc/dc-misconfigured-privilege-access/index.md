@@ -3,9 +3,9 @@ title: "DC misconfigured privilege access"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["DC", "gpo"]
 ---
-
 |GPO|Account|Privilege|
 |---|---|---|
 |Default Domain Controllers Policy|Authenticated Users|SeRemoteInteractiveLogonRight|

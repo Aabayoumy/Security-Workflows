@@ -3,9 +3,9 @@ title: "Audit and disable RC4"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["kerberoasting", "rc4"]
 ---
-
 ## Required Advanced Audit Policy Setting
 The specific advanced audit policy you need to enable is: **Audit Kerberos Service Ticket Operations**
 This policy is located under the **Account Logon category** in Advanced Audit Policy Configuration. When enabled, it generates the following events:

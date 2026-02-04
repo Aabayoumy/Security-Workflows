@@ -3,6 +3,7 @@ title: "Configure added LSA protection"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["LSAS"]
 ---
 This article explains how to configure added protection for the Local Security Authority (LSA) process to prevent code injection that can compromise credentials.

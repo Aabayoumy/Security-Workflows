@@ -3,8 +3,8 @@ title: "Kerberos pre-authentication disabled"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 Some accounts have Kerberos preauthentication disabled. Without preauthentication, it is possible to acquire a ticket encrypted with one of the Kerberos keys associated with the requested account. It is then possible to carry out a brute force or dictionary guessing attack to crack an account password if it is not strong enough. 
 
 Kerberos pre-authentication ensures that users requesting a Ticket Granting Ticket (TGT) know a given authentication secret. By default, all user accounts require pre-authentication because their `DONT_REQUIRE_PREAUTH` property is not set. That property was designed for backward compatibility with older Kerberos implementations. 

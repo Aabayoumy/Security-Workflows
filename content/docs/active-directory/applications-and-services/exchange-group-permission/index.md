@@ -3,9 +3,9 @@ title: "Exchange group permission"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["exchange"]
 ---
-
 **NOTE:** this action needs to understand the exchange environment and ensure that this will not affect the customer
 
 When Exchange is installed, a set of permissions is modified to allow a deep Windows integration. A dependency analysis has shown that the permissions, that Exchange has set, introduced a possibility for privilege escalation.  

@@ -3,9 +3,9 @@ title: "Replication commands"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["replication"]
 ---
-
 To replicate and check the summary of **Active Directory replication**, you can use **Repadmin**, **Dcdiag**, and PowerShell.
 ##### Force Replication
 Use **Repadmin** to manually trigger replication:

@@ -1,7 +1,8 @@
 ---
 title: "Operations & Recovery"
 draft: false
-weight: 70
+weight: 50
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

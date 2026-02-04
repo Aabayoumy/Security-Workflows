@@ -3,9 +3,9 @@ title: "TLS GPO"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["TLS"]
 ---
-
 [TLS]({{< relref "docs/active-directory/protocol-hardening/tls" >}})
 
 ```powershell

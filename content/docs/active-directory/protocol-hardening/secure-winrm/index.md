@@ -3,9 +3,9 @@ title: "Secure WinRM"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["Winrm"]
 ---
-
 ## Introduction
 Windows Remote Management (WinRM) is a powerful tool for managing Windows servers remotely, but by default, it uses unencrypted communication. For a secure environment, it's crucial to configure WinRM to use HTTPS. This post will guide you through securing WinRM using a custom certificate template and Group Policy in an Active Directory environment.
 ## Step 1: Create a Custom Certificate Template

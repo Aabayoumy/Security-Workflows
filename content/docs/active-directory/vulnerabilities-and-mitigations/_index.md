@@ -1,7 +1,8 @@
 ---
 title: "Vulnerabilities & Mitigations"
 draft: false
-weight: 90
+weight: 100
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

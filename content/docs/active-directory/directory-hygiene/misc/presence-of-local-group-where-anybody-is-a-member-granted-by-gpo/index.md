@@ -3,8 +3,8 @@ title: "Presence of local group where anybody is a member granted by GPO"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 The purpose is to identify if there are local groups such as local administrators, terminal server access, where Authenticated Users or Everyone is being granted access by a GPO
 
 **Technical explanation:**

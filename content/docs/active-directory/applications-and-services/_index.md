@@ -1,7 +1,8 @@
 ---
 title: "Applications & Services"
 draft: false
-weight: 80
+weight: 90
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

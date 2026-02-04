@@ -2,7 +2,8 @@
 title: "DNS"
 draft: false
 authors: ["ahmed"]
-weight: 10
+weight: 130
+bookCollapseSection: true
 ---
 
 DNS hardening checks and configuration guidance.

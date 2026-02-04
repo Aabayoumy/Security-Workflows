@@ -1,7 +1,8 @@
 ---
 title: "Certificate Services (AD CS)"
 draft: false
-weight: 60
+weight: 110
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

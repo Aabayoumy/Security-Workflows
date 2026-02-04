@@ -3,9 +3,9 @@ title: "DES disable"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["Encryption", "kerberos"]
 ---
-
 Disable DES key usage for the accounts
 Get-ADUser -FiIter {UserAccountcontr01 -band 0x200000} | Set-ADAccountContr01 -UseDESKeyonly $flase
 

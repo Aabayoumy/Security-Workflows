@@ -3,9 +3,9 @@ title: "AppLocker Implementation with AaronLocker"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["Hardening", "applocker"]
 ---
-
 This guide details the step-by-step process of implementing AppLocker in a Windows Active Directory environment using the **AaronLocker** toolset. AaronLocker simplifies the creation and maintenance of AppLocker policies, focusing on a strategy that allows execution from secure (admin-writable) directories while restricting execution from user-writable locations.
 
 ## Prerequisites

@@ -2,6 +2,7 @@
 title: "Baseline & Audit"
 draft: false
 weight: 20
+bookCollapseSection: true
 authors: ["ahmed"]
 ---
 

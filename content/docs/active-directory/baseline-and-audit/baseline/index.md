@@ -3,6 +3,7 @@ title: "Baseline"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 120
 ---
 
 1. Update ADMX:
@@ -60,7 +61,7 @@ O=MOZILLA CORPORATION, L=SAN FRANCISCO, S=CALIFORNIA, C=US
 3. Disable these settings **(Member Server)**:
 	1. NTLM return to default value: `Send NTLMv2 response only`
 	2. Windows Defender Firewall change to not configure (Always check the status with gpresult)  ![20251022145326.png](20251022145326.png)
-	3. Legacy LAPS setting (off)![20250115164539.png](20250115164539.png)
+	3. LAPS legacy policy settings (off)![20250115164539.png](20250115164539.png)
 	4. UAC  (Behavior of the elevation prompt for standard users)![20250127131736.png](20250127131736.png)
 4. Disable these settings **(Computers)**:
 	1. Windows Defender Firewall change to not configure (Always check the status with gpresult)  

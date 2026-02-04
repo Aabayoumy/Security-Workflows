@@ -3,8 +3,8 @@ title: "Migrate to Windows laps"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 Migration Scenario by [Microsoft](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-scenarios-deployment-migration#transient-side-by-side-coexistence-approach):
 ![20250430155828.png](20250430155828.png)
 

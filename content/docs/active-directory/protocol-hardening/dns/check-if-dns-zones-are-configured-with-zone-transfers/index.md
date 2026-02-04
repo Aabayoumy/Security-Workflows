@@ -3,8 +3,8 @@ title: "Check if DNS zones are configured with zone transfers"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 | Zone            |
 | --------------- |
 | bojdomain.local |

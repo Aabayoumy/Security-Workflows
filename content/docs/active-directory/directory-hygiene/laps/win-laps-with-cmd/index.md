@@ -3,9 +3,9 @@ title: "Win-LAPS with cmd"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["cmd", "laps"]
 ---
-
 gpupdate 3 times
 
 Edit GPO to add Scheduled Task:

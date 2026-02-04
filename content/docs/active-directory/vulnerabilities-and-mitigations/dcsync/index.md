@@ -3,8 +3,8 @@ title: "DCSync"
 date: 2026-02-03T08:51:11
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 ```powershell
 # list users that can perform DCsync
 $DN=(Get-ADDomain).DistinguishedName

@@ -3,6 +3,7 @@ title: "Secrets from the Deep – The DNS Analytical Log – Part 4"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["DNS"]
 ---
 Hi Team, it's Eric Jansen again, here today to continue where we left off in [Part 3](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/secrets-from-the-deep-the-dns-analytical-log-part-3/ba-p/1985830) of the series.  In the last episode, we discussed how to parse the DNS Analytical Log using a sample scenario where I've deployed a DNS Black Hole Solution, and my goal was to harvest specific data of interest.  Today we are going to take the data that we previously collected and report our findings.  I wanted to talk about this because I've seen a number of customers employ DNS block lists as a security measure, but they don't look to see what's getting blocked, which I find somewhat shocking.  If you don’t check to see what's actually being blocked, other than the occasional end user complaining that they can’t get to something, how would you know if the block list is providing any value at all? 

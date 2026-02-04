@@ -3,6 +3,7 @@ title: "Kerberoasting"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 80
 tags: ["18", "kerberoasting"]
 ---
 

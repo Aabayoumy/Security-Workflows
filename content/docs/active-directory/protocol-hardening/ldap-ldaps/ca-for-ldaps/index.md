@@ -3,9 +3,9 @@ title: "CA for LDAPS"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["LDAPS"]
 ---
-
 The Certificate to be used for LDAPS must satisfy the following 3 requirements:  
 • Certificate must be valid for the purpose of Server Authentication. This means that it must also contains the Server Authentication object identifier (OID): 1.3.6.1.5.5.7.3.1  
 • The Subject name or the first name in the Subject Alternative Name (SAN) must match the Fully Qualified Domain Name (FQDN) of the host machine, such as Subject:CN=contosoldaps. For more information, see [How to add a Subject Alternative Name to a secure LDAP certificate](http://support.microsoft.com/kb/931351 "Explains adding a SAN to a LDAPS certificate"). 

@@ -3,6 +3,7 @@ title: "Windows LAPS"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 70
 tags: ["Allow", "WindowsLAPS", "Write-Host", "give", "laps"]
 ---
 

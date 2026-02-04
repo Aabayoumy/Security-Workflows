@@ -3,7 +3,7 @@ title: "Enterprise Access Model (Tiered Admin)"
 date: 2026-02-01
 authors: ["ahmed"]
 tags: ["Security", "Active Directory", "Privileged Access"]
-weight: 30
+weight: 140
 ---
 
 # 🏰 Enterprise Access Model (Tiered Admin)

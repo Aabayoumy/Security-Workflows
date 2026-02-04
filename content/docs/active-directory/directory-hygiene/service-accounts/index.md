@@ -3,8 +3,8 @@ title: "Service Accounts"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 To set custom password policy for service accounts:
 1. Open Active Directory Administrative Center
 2. From right-bar navigate to `<your_domain> > system > Password Setting Container`

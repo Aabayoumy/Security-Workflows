@@ -3,8 +3,8 @@ title: "Denied RODC Password Replication Group"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 ---
-
 **Advised solution:**
 Check the value of the attribute `msDS-NeverRevealGroup` and the presence of the following expected groups:  
 - Administrators;  

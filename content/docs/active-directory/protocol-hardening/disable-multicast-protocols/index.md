@@ -3,9 +3,9 @@ title: "Disable Multicast Protocols"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["llmnr", "mdns", "multicast", "netbios"]
 ---
-
 Create New GPO and create schedule task with this script:
 
 ```powershell

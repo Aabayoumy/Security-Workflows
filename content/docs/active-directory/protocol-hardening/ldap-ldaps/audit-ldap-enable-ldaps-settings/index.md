@@ -3,6 +3,7 @@ title: "Audit LDAP & Enable LDAPS settings"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 30
 tags: ["LDAP", "LDAPS"]
 ---
 

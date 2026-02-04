@@ -1,40 +1,29 @@
 ---
 title: "Active Directory Hardening"
-bookCollapseSection: false
 weight: 10
+bookCollapseSection: false
 authors: ["ahmed"]
 ---
 
-This is the practical rollout plan to harden Active Directory in phases (audit -> enforce), with verification steps and rollback notes.
+This is the original action plan, sorted by execution order.
 
-## Phase 0 - Foundations
+## Execution Order
 
-- Confirm backups, break-glass access, and a tested restore path.
-- Capture baseline: GPO reports, DC health, authentication usage, and protocol telemetry.
-
-## Phase 1 - Privileged Access
-
-- [Privileged Access]({{< relref "privileged-access" >}})
-
-## Phase 2 - Protocol Hardening
-
-- [Protocol Hardening]({{< relref "protocol-hardening" >}})
-
-## Phase 3 - Domain Controller Hardening
-
-- [Domain Controllers]({{< relref "domain-controllers" >}})
-
-## Phase 4 - Directory Hygiene
-
-- [Directory Hygiene]({{< relref "directory-hygiene" >}})
-
-## Phase 5 - PKI / AD CS
-
-- [Certificate Services]({{< relref "certificate-services" >}})
-
-## References
-
-- [Microsoft security baseline for Windows / AD](https://learn.microsoft.com/)
+1. [AD Assessment]({{< relref "baseline-and-audit/ad-assessment" >}})
+2. [Audit & Disable NTLM]({{< relref "protocol-hardening/audit-disable-ntlm" >}})
+3. [Audit LDAP & Enable LDAPS settings]({{< relref "protocol-hardening/ldap-ldaps/audit-ldap-enable-ldaps-settings" >}})
+4. [Audit SMBv1]({{< relref "protocol-hardening/audit-smbv1" >}})
+5. [Export inactive users and computers & users with never-expire passwords]({{< relref "baseline-and-audit/account-hygiene-exports" >}})
+6. [Export non-supported OS]({{< relref "baseline-and-audit/export-unsupported-os" >}})
+7. [Windows LAPS]({{< relref "directory-hygiene/laps/windows-laps" >}})
+8. [Kerberoasting]({{< relref "directory-hygiene/misc/kerberoasting" >}})
+9. [Kerberos Armoring]({{< relref "kerberos-armoring" >}})
+10. [Reset KRBTGT password]({{< relref "operations-and-recovery/reset-krbtgt-password" >}})
+11. AzureAD SSO: [AzureADSSO reset (every 30 days)]({{< relref "docs/entra-id/azureadsso-reset" >}})
+12. [Certificate misconfigurations]({{< relref "certificate-services" >}})
+13. [Baseline DCs, servers & workstations]({{< relref "baseline-and-audit/baseline" >}})
+14. [DNS]({{< relref "protocol-hardening/dns" >}})
+15. [Tiering]({{< relref "tiered-administration" >}})
 
 ## Topics
 

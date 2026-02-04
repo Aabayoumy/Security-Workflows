@@ -3,9 +3,9 @@ title: "Vulnerable Schema Class"
 date: 2026-02-03T08:52:24
 draft: false
 authors: ["ahmed"]
+weight: 200
 tags: ["exchange"]
 ---
-
 This vulnerability occurs because Exchange adds certain attributes to the schema, and some of these attributes are inherently vulnerable.
 
 CVE-2021-34470
