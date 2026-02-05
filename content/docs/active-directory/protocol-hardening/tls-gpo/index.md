@@ -8,47 +8,8 @@ tags: ["TLS"]
 ---
 [TLS]({{< relref "docs/active-directory/protocol-hardening/tls" >}})
 
-```powershell
-$GPO = "Disable-TLS1.0&1.1_Enable-TLS1.2"
-    New-GPO -Name $GPO -Comment "Link it to Doamin Controllers OU"
-    # Disable TLS1.0
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client" -ValueName "Enabled" -Type Dword -Value 0
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client" -ValueName "DisabledByDefault" -Type Dword -Value 1
-    # Disable TLS1.1
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client" -ValueName "Enabled" -Type Dword -Value 0
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client" -ValueName "DisabledByDefault" -Type Dword -Value 1
-    # Enable TLS1.1
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" -ValueName "Enabled" -Type Dword -Value 1
-        Set-GPRegistryValue -Name $GPO -Key "HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client" -ValueName "DisabledByDefault" -Type Dword -Value 0
+This content is consolidated into:
 
-write-Host "Dont forget to link new GPO Disable-TLS1.0&1.1_Enable-TLS1.2 to Doamin Controllers OU"
+- [Disable TLS 1.0/1.1 and enforce TLS 1.2 (Active Directory)]({{< relref "docs/active-directory/directory-hygiene/misc/disable-tls-1-0-1-1-force-tls-1-2" >}})
 
-```
-
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client
-Enabled   0
-DisabledByDefault   1
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server
-Enabled   0
-DisabledByDefault   1
-
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client
-Enabled   0
-DisabledByDefault   1
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server
-Enabled   0
-DisabledByDefault   1
-
-
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client
-Enabled   1
-DisabledByDefault   0
-
-SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server
-Enabled   1
-DisabledByDefault   0
+That guide includes a corrected PowerShell script that sets both Client and Server Schannel protocol keys and includes audit/verification steps.

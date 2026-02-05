@@ -22,6 +22,19 @@ Not impacted:
 
 - SMB (TCP/445) does not use TLS; it uses SMB dialect negotiation (SMB2/SMB3) and optional SMB3 encryption.
 
+## GPO linking strategy (DC-only vs domain-wide)
+
+You can deploy Schannel TLS protocol settings in two common ways:
+
+- Domain Controllers OU (AD services focus)
+  - Best when the goal is to harden AD endpoints (LDAPS/StartTLS/3269) while minimizing blast radius.
+  - Still validate any applications and devices that bind to AD over LDAPS/StartTLS.
+- Domain root / all computers (organization-wide hardening)
+  - Best when you want consistent TLS posture for all Windows clients and servers.
+  - Higher risk of breaking legacy line-of-business apps and third-party agents.
+
+If you are unsure, start with DC-only (pilot), then expand to a broader scope after you confirm there are no TLS 1.0/1.1 dependencies.
+
 ## Audit first (confirm what is working today)
 
 Do both: (1) check server configuration, (2) confirm real client traffic/protocol negotiation.
@@ -254,6 +267,35 @@ Suggested targeting:
 - Link to the `Domain Controllers` OU.
 - Pilot with Security Filtering (apply to a small set of DC computer accounts).
 
+### Create the GPO via PowerShell (optional)
+
+This creates/updates a GPO and writes the required Schannel registry values (both Client and Server).
+
+```powershell
+$GpoName = 'Disable-TLS1.0-1.1_Enable-TLS1.2'
+
+if (-not (Get-GPO -Name $GpoName -ErrorAction SilentlyContinue)) {
+  New-GPO -Name $GpoName -Comment 'Disable TLS 1.0/1.1; ensure TLS 1.2 enabled (Schannel). Reboot required.' | Out-Null
+}
+
+$settings = @(
+  @{ Proto='TLS 1.0'; Enabled=0; DisabledByDefault=1 }
+  @{ Proto='TLS 1.1'; Enabled=0; DisabledByDefault=1 }
+  @{ Proto='TLS 1.2'; Enabled=1; DisabledByDefault=0 }
+)
+
+foreach ($s in $settings) {
+  foreach ($side in 'Client','Server') {
+    $key = "HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurityProviders\\SCHANNEL\\Protocols\\$($s.Proto)\\$side"
+    Set-GPRegistryValue -Name $GpoName -Key $key -ValueName 'Enabled' -Type DWord -Value $s.Enabled
+    Set-GPRegistryValue -Name $GpoName -Key $key -ValueName 'DisabledByDefault' -Type DWord -Value $s.DisabledByDefault
+  }
+}
+
+Write-Host "Created/updated GPO: $GpoName"
+Write-Host 'Link it to the Domain Controllers OU (pilot with security filtering), then reboot targeted DCs.'
+```
+
 ### Local PowerShell (single DC)
 
 ```powershell
@@ -312,3 +354,7 @@ If a critical legacy dependency is found, temporarily re-enable TLS 1.0/1.1 by s
 - TLS 1.0/1.1: `Enabled=1`, `DisabledByDefault=0`
 
 Then schedule remediation of the legacy client (patch/upgrade/configure) and re-disable TLS 1.0/1.1.
+
+## Sources
+
+https://learn.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings
