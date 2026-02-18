@@ -20,6 +20,7 @@ Entra ID (formerly Azure AD) is the gateway to your cloud resources. Hardening E
 
 **Hybrid Identity**
 - [Azure AD SSO Reset]({{< relref "azureadsso-reset" >}})
+- [Entra ID App Proxy]({{< relref "application-proxy" >}})
 - Password Hash Sync (PHS)
 - Certificate Based Auth (CBA)
 {{< /columns >}}
